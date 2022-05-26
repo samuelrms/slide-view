@@ -1,0 +1,200 @@
+body {
+  margin: 0px;
+  font-size: 90%;
+}
+ul {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+img {
+  display: block;
+  width: 100%;
+}
+
+.slide-wrapper {
+  overflow: hidden;
+  margin-top: 30px;
+}
+.slide {
+  display: flex;
+}
+.slide:hover {
+  will-change: transform;
+}
+.slide li {
+  flex-shrink: 0;
+  max-width: 400px;
+  margin: 0px 20px;
+  opacity: 0.3;
+  transform: scale(0.8);
+  transition: 1s;
+  border-radius: 4px;
+}
+.slide img {
+  height: auto;
+  background-position: center;
+  background-size: cover;
+}
+.slide li p {
+  flex-wrap: wrap;
+  text-align: center;
+  font-size: 1.15em;
+}
+
+.slide li.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.custom-control {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.custom-control li {
+  opacity: 0.8;
+  transform: scale(0.8);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 2px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+  transition: 1s;
+  cursor: pointer;
+  background-size: auto;
+}
+.custom-control li.active {
+  opacity: 1;
+  transform: scale(1.2);
+}
+.custom-control img{
+  display: block;
+  width: 100%;
+  background-size: cover;
+  height: 100%;
+}
+.arrow-nav {
+  display: flex;
+  justify-content: space-around;
+}
+.arrow-nav button {
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  width: 40px;
+  margin: 30px 0px;
+  height: 40px;
+  background: linear-gradient(
+    140deg,
+    #000000,
+    #000011,
+    #121317,
+    #333333,
+    #2e2e2e,
+    #4d4d4d
+  );
+  color: #fff;
+  font-size: 13px;
+  font-weight: bold;
+  transition: 1s;
+}
+.noturno {
+/* muda a cor do fundo */
+  background: linear-gradient(
+    140deg,
+    #000000,
+    #000011,
+    #121317,
+    #333333,
+    #2e2e2e,
+    #4d4d4d
+  );
+}
+.modo-noturno {
+  margin: 10px 0px 0px 50px;
+  border-radius: 50px;
+  border: none;
+  background: linear-gradient(
+    140deg,
+    #000000,
+    #000011,
+    #121317,
+    #333333,
+    #2e2e2e,
+    #4d4d4d
+  );
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: 1s;
+}
+.title {
+  text-align: center;
+  font-size: 2em;
+  background: linear-gradient(
+    140deg,
+    #000000,
+    #000011,
+    #121317,
+    #333333,
+    #2e2e2e,
+    #4d4d4d
+  );
+  color: #fff;
+  padding: 1px;
+  transition: 1s;
+  margin-top: -15px;
+}
+.slide h2 {
+  text-align: center;
+  font-size: 1.5em;
+}
+.tema p {
+  font-weight: bold;
+  margin: 0px 0px 0px 48px;
+  transition: 1s;
+}
+.noturno .tema p {
+  color: #fff;
+}
+.noturno .title,
+.noturno .modo-noturno,
+.noturno .arrow-nav button{
+  background: linear-gradient(
+    140deg,
+    #4F4F4F,
+    #696969,
+    #808080,
+    #A9A9A9,
+    #C0C0C0,
+    #D3D3D3,
+    #DCDCDC
+  );
+  color: #000;
+}
+
+@media (max-width: 700px) {
+  .slide {
+    margin-bottom: 20px;
+  }
+  .arrow-nav button {
+    width: 60px;
+    height: 60px;
+  }
+  .title {
+    font-size: 1.25em;
+  }
+  .slide li p {
+    font-size: 0.75em;
+  }
+  .slide h2 {
+    font-size: 1.25em;
+  }
+  .slide li {
+    max-width: 300px;
+  }
+}
